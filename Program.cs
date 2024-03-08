@@ -19,7 +19,6 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 var configuration = builder.Configuration;
 
-
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen(option =>
 {
@@ -125,7 +124,7 @@ services.Configure<IdentityOptions>(options =>
     options.ClaimsIdentity.RoleClaimType = ClaimTypes.Role; // Change the default role claim type
 });
 
-services.AddStackExchangeRedisCache(options => { options.Configuration = configuration["RedisCacheUrl"]; });
+//services.AddStackExchangeRedisCache(options => { options.Configuration = configuration["RedisCacheUrl"]; });
 
 
 // Configure the HTTP request pipeline.
